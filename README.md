@@ -6,7 +6,17 @@ Natural Language Processing for FbTrex. We use state-of-the-art NLP techniques t
 $ python -m pip install -U venv
 $ venv nlp
 $ source nlp/bin/activate
-$ pip install -U spacy
+$ pip install -U spacy-nightly
+```
+Remember to install the language pack as well!
+```
+$ spacy download en
+$ space download es
+```
+or via pip:
+```
+pip install -U en-core-web-sm 
+pip install -U es-core-web-sm 
 ```
 Later on we will also use gensim to provided training for our model 
 2) Download dataset
