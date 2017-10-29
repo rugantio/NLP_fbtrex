@@ -27,6 +27,7 @@ def lemmatized_sentence_corpus(filename):
         for sent in parsed_review.sents:
             yield u' '.join([token.lemma_ for token in sent if not punct_space(token)])
 
+#Create a new file with a clean text (without punctuation or caps)
 with open('data/new_text.txt', 'w') as f:
     for sentence in lemmatized_sentence_corpus('data/text2.txt'):
         f.write(sentence + '\n')

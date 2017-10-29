@@ -1,4 +1,3 @@
-
 ##### LANGUAGE PROCESSING
 import spacy
 
@@ -6,11 +5,12 @@ import spacy
 with open('data/text2.txt','r') as text:
     full_txt = text.read()
 
-#Import Spact spanish lang model
+#Import Spacy spanish lang model
 nlp = spacy.load('es_core_web_sm')
 
 #Initialize Spacy pipeline (tokenize, parse and tag the full text)
 # WARNING: Resource consuming!
+#We will be using nlp.pipe later that supports multithreading
 doc = nlp(full_txt)
 
 ##### VISUALIZATION
