@@ -15,7 +15,7 @@ As a team member, I'm proud to say that the datasets are the result of a collect
 If you are thinking to go beyond testing the generously provided models, and you want to learn how to make bots to crawl Facebook  yourself and build your own datasets, refer to the main fbtrex project [backend](https://github.com/tracking-exposed/facebook) (UPDATE: I'm currently working on fbtrex guide for wannabe researchers).
 
 ## Setting up
-While working with NLP it's often convenient to work with virtual environments. Some of the tools provided are frequently upgraded with new functionalities, while others are subject to model and architecture changes. Having different toolchains allows one to compare the different modules and find the best tools fit for the nlp tasks. 
+While working with NLP it's often convenient to work with __virtual environments__. Some of the tools provided are frequently upgraded with new functionalities, while others are subject to model and architecture changes. Having different toolchains allows one to compare the different modules and find the best tools fit for the nlp tasks. 
 If you already know what is right for your job you can install everything in the global python without using virtual enviroments but remember that Python provides native sandbox creation and management, thus allowing to keep a clean global environment while still having a bleeding edge development branch in production.
 
 ### Virtual Environment
