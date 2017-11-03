@@ -1,6 +1,6 @@
 # NLP with Python for Facebook Mining
 ## Introduction
-In this review I present a non-exhaustive list tools for analyzing a text corpus using Python. We use state-of-the-art NLP techniques to mine facebook users text from their post. 
+In this review I present a non-exhaustive list tools for analyzing a text corpus using Python. I will use state-of-the-art NLP techniques to mine Facebook user's text from their posts. 
 
 ## Requirements (tools and libs)
 * The code uses __python3__, it can be easily backported to python2 if needed, but that's up to you.
