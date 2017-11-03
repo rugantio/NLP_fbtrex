@@ -4,7 +4,7 @@ In this review I present a non-exhaustive list tools for analyzing a text corpus
 
 ## Requirements (tools and libs)
 * The code uses __python3__, it can be easily backported to python2 if needed, but that's up to you.
-* This notebook can be easily viewed here in GitHub or [nbviewer](https://nbviewer.jupyter.org/). The preferred way to run the code is to clone the repository and install [__jupyter__](https://jupyter.org/). However If you want to be able to recompute some parts without using your own jupyter, you can use the awesome [Binder](https://mybinder.org/) (currently in beta).
+* This notebook can be easily viewed here in GitHub or [nbviewer](https://nbviewer.jupyter.org/). The preferred way to run the code is to clone the repository and install [__jupyter__](https://jupyter.org/). However If you want to be able to recompute some parts without using your own jupyter, you can try the awesome [Binder](https://mybinder.org/) (currently in beta).
 (Optional: Install the [__Spyder IDE__](https://github.com/spyder-ide/spyder) which provides IPython integration).
 * Standard Python scientific stack is needed. You can install it through the [conda](https://conda.io/) package manager, through your package manager distribution, or using __pip__, Python's own package manager.
 Modules used utilize [__Pandas__](http://pandas.pydata.org/) for data analysis and naive visualization, [__scikit-learn__](http://scikit-learn.org/) for comparative machine learning.
@@ -28,7 +28,6 @@ Running this command creates a nlp directory in this nb directory and places a p
 ```
 #Activate nlp venv
 source nlp/bin/activate
-Remember to install the language pack as well!
 ```
 __Note__: You don't specifically need to activate an environment; activation just prepends the virtual environment's binary directory to your path, so that "python" invokes the virtual environment's Python interpreter and you can run installed scripts without having to use their full path. However, all scripts installed in a virtual environment should be runnable without activating it, and run with the virtual environment's Python automatically.
 __Note2__: If you are using Spyder IDE, remember to change Python interpreter's path: Tools->Preferences->Python interpreter->~/nlp/bin/python3
