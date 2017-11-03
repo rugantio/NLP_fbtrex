@@ -16,7 +16,7 @@ If you are thinking to go beyond testing the generously provided models, and you
 
 ## Setting up
 While working with NLP it's often convenient to work with __virtual environments__. Some of the tools provided are frequently upgraded with new functionalities, while others are subject to model and architecture changes. Having different toolchains allows one to compare the different modules and find the best tools fit for the nlp tasks. 
-If you already know what is right for your job you can install everything in the global python without using virtual enviroments but remember that Python provides native sandbox creation and management, thus allowing to keep a clean global environment while still having a bleeding edge development branch in production.
+If you already know what is right for your job you can install everything in the global Python without using virtual enviroments but remember that Python provides native sandbox creation and management, thus allowing to keep a clean global environment while still having a bleeding edge development branch in production.
 
 ### Virtual Environment
 Python 3.3+ comes with a module called [__venv__](https://docs.python.org/3/library/venv.html). For applications that require an older version of Python, [virtualenv](https://virtualenv.pypa.io/en/stable/) is to be used.
