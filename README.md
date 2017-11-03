@@ -16,7 +16,7 @@ If you are thinking to go beyond testing the generously provided models, and you
 
 ## Setting up
 While working with NLP it's often convenient to work with __virtual environments__. Some of the tools provided are frequently upgraded with new functionalities, while others are subject to model and architecture changes. Having different toolchains allows one to compare the different modules and find the best tools fit for the nlp tasks. 
-If you already know what is right for your job you can install everything in the global Python without using virtual enviroments but remember that Python provides native sandbox creation and management, thus allowing to keep a clean global environment while still having a bleeding edge development branch in production.
+If you already know what is right for your job you can install everything in the global Python without using virtual enviroments, but remember that Python provides native sandbox creation and management thus allowing to keep a clean global environment while still having a bleeding edge development branch in production.
 
 ### Virtual Environment
 Python 3.3+ comes with a module called [__venv__](https://docs.python.org/3/library/venv.html). For applications that require an older version of Python, [virtualenv](https://virtualenv.pypa.io/en/stable/) is to be used.
@@ -24,7 +24,7 @@ Python 3.3+ comes with a module called [__venv__](https://docs.python.org/3/libr
 #Create a nlp virtual environment for efficient sandboxing
 python -m venv nlp
 ```
-Running this command creates a nlp directory in this nb directory and places a pyvenv.cfg file in it with a home key pointing to the Python installation from which the command was run. It also creates a bin subdirectory containing a copy of the python binary. It also creates an (initially empty) lib/pythonX.Y/site-packages subdirectory, where pip install modules will end up.
+Running this command creates a nlp directory in this nb directory and places a pyvenv.cfg file in it with a home key pointing to the Python installation from which the command was run. It also creates a bin subdirectory containing a copy of the python binary. It also creates an (initially empty) lib/pythonX.Y/site-packages subdirectory, where pip installed modules will end up.
 ```
 #Activate nlp venv
 source nlp/bin/activate
@@ -38,7 +38,7 @@ Most of these tools can be installed globally via your linux distribution's pack
 #Install minimal scientific python stack
 pip install pandas && pip install scikit-learn
 ```
-__Note__: If you already installed some package via pip you can upgrade to latest version with "pip install -U ModelName"
+__Note__: If you already have installed some package via pip you can upgrade to latest version with "pip install -U ModelName"
 
 ### Install NLP modules
 Let's begin our journey using only __spaCy__ for data analysis. Later on we will also use gensim to provided unsupervised training for our model. 
