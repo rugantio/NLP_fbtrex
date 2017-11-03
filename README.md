@@ -13,6 +13,7 @@ Modules used utilize [__Pandas__](http://pandas.pydata.org/) for data analysis a
 ## Datasets
 As a team member, I'm proud to say that the datasets are the result of a collective effort of the [__Facebook Tracking Exposed__](https://facebook.tracking.exposed/) project and can be easily retrieved from the GitHub [repo](https://github.com/tracking-exposed/experiments-data/).
 If you are thinking to go beyond testing the generously provided models, and you want to learn how to make bots to crawl Facebook  yourself and build your own datasets, refer to the main fbtrex project [backend](https://github.com/tracking-exposed/facebook) (UPDATE: I'm currently working on fbtrex guide for wannabe researchers).
+At the moment fbtrex allows one to crawl public posts from single users thus exposing Facebook's filter bubble. To have a more comprehensive analysis it's useful to compare these bubbles not only between themselves, but also with all the posts of a public page. This feature is not currently implemented (we are trying) although the posts of a single page can be retrieved via Facebook's own Graph API (you will actually need a developer token to do this).
 
 ## Setting up
 While working with NLP it's often convenient to work with __virtual environments__. Some of the tools provided are frequently upgraded with new functionalities, while others are subject to model and architecture changes. Having different toolchains allows one to compare the different modules and find the best tools fit for the nlp tasks. 
@@ -54,28 +55,5 @@ spacy download en_core_web_sm
 #Download Spanish model
 spacy download es_core_web_sm
 ```
-
-## Download dataset
-```
-$ wget -c http://facebook.tracking.exposed:XXXXX/
-```
-The dataset is a nested json, kindly provided by fbtrex team. At the moment this file is private, but you make your own using fbtrex tool!
-Once downloaded put the file in the data directory and rename it ent100k.json (make is shorter for text, the processing is time consuming!) 
-## Parse the raw json
-```
-$ python preprocessing.py
-```
-This will parse the json and extract only the text fields. Any other relevant information (id, source etc.) is lost during this process. The parsed text is put in text.txt, with one review per line.
-## Apply Spacy NLP
-Spacy makes it very simple to analyze text, since it uses only one function!
-Run naive_nlp.py to process the text file in a basic way 
-```
-$ python naive_nlp.py
-```
-Now you can explore all the things that spacy does for you! Spacy provides non-destructive tokenization, named entity recognition, part-of-speech tagging, labelled dependency parsing, a built-in visualizer and much more!  
-
-We will actually use Spacy's normalization pipeline to have the text ready for topic mining. Run nlp.py to have the text broken down into sentences and normalized: 
-```
-$ python nlp.py
-```
-For every step we take it's good to have a new file. After this snippet, you will find a new_text.txt in your data directory, make sure it contains the normalized text.
+## Contribute
+There are many ways of contributing to NLP analysis on Facebook! You 
