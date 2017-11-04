@@ -35,7 +35,7 @@ source nlp/bin/activate
 ```
 __Note__: You don't specifically need to activate an environment; activation just prepends the virtual environment's binary directory to your path, so that "python" invokes the virtual environment's Python interpreter and you can run installed scripts without having to use their full path. However, all scripts installed in a virtual environment should be runnable without activating it, and run with the virtual environment's Python automatically.
 
-__Note2__: If you are using Spyder IDE, remember to change Python interpreter's path: *Tools -> Preferences -> Python interpreter-> ~/nlp/bin/python3*
+__Note2__: If you are using Spyder IDE, remember to change Python interpreter's path: *Tools -> Preferences -> Python interpreter -> ~/nlp/bin/python3*
 
 ### Install core deps
 Most of these tools can be installed globally via your linux distribution's package manager. If you are working with the nlp virtual environment as suggested, you can now use pip to install the modules. 
@@ -71,7 +71,7 @@ source nlp/bin/activate
 #Create new customized kernel
 python -m ipykernel install --user --name=nlp
 ```
-To use this kernel launch Jupyter in the traditional way: *jupyter-notebook nlp*. A new local webpage will open in your browser. From the navigation bar pick *Kernel -> Change Kernel -> nlp*.  
+To use this kernel launch Jupyter in the traditional way: "*jupyter-notebook nlp*". A new local webpage will open in your browser. From the navigation bar pick *Kernel -> Change Kernel -> nlp*.  
 
-## Contribute
+## Contributing
 There are many ways of contributing to NLP analysis on Facebook! You can help the fbtrex project to build new datasets and write a notebook about it. If you speak a different language than English, please consider improving SpaCy's language support. 
