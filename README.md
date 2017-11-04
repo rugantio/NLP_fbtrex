@@ -7,6 +7,7 @@ In this review I present a non-exhaustive list tools for analyzing a text corpus
 * This notebook can be easily viewed here in GitHub or [nbviewer](https://nbviewer.jupyter.org/). The preferred way to run the code is to clone the repository and install [__Jupyter__](https://jupyter.org/). However If you want to be able to recompute some parts without using your own jupyter, you can try the awesome [Binder](https://mybinder.org/) (currently in beta), although it won't work for extra modules such as NLPs libs.
 (Optional: Install the [__Spyder IDE__](https://github.com/spyder-ide/spyder) which provides IPython integration).
 * NLP libraries: mainly only [__spaCy__](https://spacy.io/) and [__gensim__](https://radimrehurek.com/gensim/). In the future maybe try Stanford's [__CoreNLP__](https://stanfordnlp.github.io/CoreNLP/). I will avoid using mainstream [__NLTK__](www.nltk.org) in this starting phase.* Standard Python scientific stack is needed. You can install it through the [conda](https://conda.io/) package manager, through your package manager distribution, or using __pip__, Python's own package manager.
+
 Modules used utilize [__Pandas__](http://pandas.pydata.org/) for data analysis and naive visualization, [__scikit-learn__](http://scikit-learn.org/) for comparative machine learning.
 
 ## Datasets
@@ -30,6 +31,7 @@ Running this command creates a nlp directory in this nb directory and places a p
 source nlp/bin/activate
 ```
 __Note__: You don't specifically need to activate an environment; activation just prepends the virtual environment's binary directory to your path, so that "python" invokes the virtual environment's Python interpreter and you can run installed scripts without having to use their full path. However, all scripts installed in a virtual environment should be runnable without activating it, and run with the virtual environment's Python automatically.
+
 __Note2__: If you are using Spyder IDE, remember to change Python interpreter's path: *Tools -> Preferences -> Python interpreter-> ~/nlp/bin/python3*
 
 ### Install core deps
@@ -42,12 +44,15 @@ __Note__: If you already have installed some package via pip you can upgrade to 
 
 ### Install NLP modules
 Let's begin our journey using only __spaCy__ for data analysis. Later on we will also use gensim to provided unsupervised training for our model. 
+
 I suggest to try the [__alpha__](http://alpha.spacy.io/) version, which is provided via the [__spacy-nightly__](https://pypi.python.org/pypi/spacy-nightly) module. Basic and API documentation can be found in the alpha spaCy [subdomain](https://alpha.spacy.io/usage/). For the soon-legacy documentation refer to [main domain](https://spacy.io/docs/usage/).
 ```
 #Install the alpha spacy2.0 instead of 1.9
 pip install spacy-nightly
 ```
-Once installed, we can move on to download the available spaCy [language __models__](https://alpha.spacy.io/models/). You can also build your own [models](https://alpha.spacy.io/api/#nn-models) using spaCy's integrated machine learning library [__Thinc__](https://github.com/explosion/thinc). I reckon that the provided models work fine for my purposes although I'd prefer having better integration with different languages such as Spanish and Italian; if you have time to spare please contribute to [language support](https://spacy.io/docs/usage/adding-languages).
+Once installed, we can move on to download the available spaCy [language __models__](https://alpha.spacy.io/models/). You can also build your own [models](https://alpha.spacy.io/api/#nn-models) using spaCy's integrated machine learning library [__Thinc__](https://github.com/explosion/thinc). 
+
+I reckon that the provided models work fine for my purposes although I'd prefer having better integration with different languages such as Spanish and Italian; if you have time to spare please contribute to [language support](https://spacy.io/docs/usage/adding-languages).
 ```
 #Download core English model
 spacy download en_core_web_sm
