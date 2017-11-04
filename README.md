@@ -12,11 +12,14 @@ Modules used utilize [__Pandas__](http://pandas.pydata.org/) for data analysis a
 
 ## Datasets
 As a team member, I'm proud to say that the datasets are the result of a collective effort of the [__Facebook Tracking Exposed__](https://facebook.tracking.exposed/) project and can be easily retrieved from the GitHub [repo](https://github.com/tracking-exposed/experiments-data/).
+
 If you are thinking to go beyond testing the generously provided models, and you want to learn how to make bots to crawl Facebook  yourself and build your own datasets, refer to the main fbtrex project [backend](https://github.com/tracking-exposed/facebook) (UPDATE: I'm currently working on fbtrex guide for wannabe researchers).
+
 At the moment fbtrex allows one to crawl public posts from single users thus exposing Facebook's filter bubble. To have a more comprehensive analysis it's useful to compare these bubbles not only between themselves, but also with all the posts of a public page. This feature is not currently implemented (we are trying) although the posts of a single page can be retrieved via Facebook's own Graph API (you will actually need a developer token to do this).
 
 ## Setting up
 While working with NLP it's often convenient to work with __virtual environments__. Some of the tools provided are frequently upgraded with new functionalities, while others are subject to model and architecture changes. Having different toolchains allows one to compare the different modules and find the best tools fit for the nlp tasks. 
+
 If you already know what is right for your job you can install everything in the global Python without using virtual enviroments, but remember that Python provides native sandbox creation and management thus allowing to keep a clean global environment while still having a bleeding edge development branch in production.
 
 ### Virtual Environment
