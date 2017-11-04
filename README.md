@@ -4,11 +4,10 @@ In this review I present a non-exhaustive list tools for analyzing a text corpus
 
 ## Requirements (tools and libs)
 * The code uses __python3__, it can be easily backported to python2 if needed, but that's up to you.
-* This notebook can be easily viewed here in GitHub or [nbviewer](https://nbviewer.jupyter.org/). The preferred way to run the code is to clone the repository and install [__jupyter__](https://jupyter.org/). However If you want to be able to recompute some parts without using your own jupyter, you can try the awesome [Binder](https://mybinder.org/) (currently in beta).
+* This notebook can be easily viewed here in GitHub or [nbviewer](https://nbviewer.jupyter.org/). The preferred way to run the code is to clone the repository and install [__Jupyter__](https://jupyter.org/). However If you want to be able to recompute some parts without using your own jupyter, you can try the awesome [Binder](https://mybinder.org/) (currently in beta), although it won't work for extra modules such as NLPs libs.
 (Optional: Install the [__Spyder IDE__](https://github.com/spyder-ide/spyder) which provides IPython integration).
-* Standard Python scientific stack is needed. You can install it through the [conda](https://conda.io/) package manager, through your package manager distribution, or using __pip__, Python's own package manager.
+* NLP libraries: mainly only [__spaCy__](https://spacy.io/) and [__gensim__](https://radimrehurek.com/gensim/). In the future maybe try Stanford's [__CoreNLP__](https://stanfordnlp.github.io/CoreNLP/). I will avoid using mainstream [__NLTK__](www.nltk.org) in this starting phase.* Standard Python scientific stack is needed. You can install it through the [conda](https://conda.io/) package manager, through your package manager distribution, or using __pip__, Python's own package manager.
 Modules used utilize [__Pandas__](http://pandas.pydata.org/) for data analysis and naive visualization, [__scikit-learn__](http://scikit-learn.org/) for comparative machine learning.
-* NLP libraries: mainly only [__spaCy__](https://spacy.io/) and [__gensim__](https://radimrehurek.com/gensim/). In the future maybe try Stanford's [__CoreNLP__](https://stanfordnlp.github.io/CoreNLP/). I will avoid using mainstream [__NLTK__](www.nltk.org) in this starting phase.
 
 ## Datasets
 As a team member, I'm proud to say that the datasets are the result of a collective effort of the [__Facebook Tracking Exposed__](https://facebook.tracking.exposed/) project and can be easily retrieved from the GitHub [repo](https://github.com/tracking-exposed/experiments-data/).
@@ -31,7 +30,7 @@ Running this command creates a nlp directory in this nb directory and places a p
 source nlp/bin/activate
 ```
 __Note__: You don't specifically need to activate an environment; activation just prepends the virtual environment's binary directory to your path, so that "python" invokes the virtual environment's Python interpreter and you can run installed scripts without having to use their full path. However, all scripts installed in a virtual environment should be runnable without activating it, and run with the virtual environment's Python automatically.
-__Note2__: If you are using Spyder IDE, remember to change Python interpreter's path: Tools->Preferences->Python interpreter->~/nlp/bin/python3
+__Note2__: If you are using Spyder IDE, remember to change Python interpreter's path: *Tools -> Preferences -> Python interpreter-> ~/nlp/bin/python3*
 
 ### Install core deps
 Most of these tools can be installed globally via your linux distribution's package manager. If you are working with the nlp virtual environment as suggested, you can now use pip to install the modules. 
@@ -55,5 +54,16 @@ spacy download en_core_web_sm
 #Download Spanish model
 spacy download es_core_web_sm
 ```
+
+### Jupyter
+To really appreciate this work you will have to try it out yourself. The Jupyter project provides an IPython console in which you can run code on your machine. If you are in a virtual env you will have to rebuild the IPython kernel after you installed all the core deps and modules:
+```
+#Activate nlp venv
+source nlp/bin/activate
+#Create new customized kernel
+python -m ipykernel install --user --name=nlp
+```
+To use this kernel launch Jupyter in the traditional way: *jupyter-notebook nlp*. A new local webpage will open in your browser. From the navigation bar pick *Kernel -> Change Kernel -> nlp*.  
+
 ## Contribute
-There are many ways of contributing to NLP analysis on Facebook! You 
+There are many ways of contributing to NLP analysis on Facebook! You can help the fbtrex project to build new datasets and write a notebook about it. If you speak a different language than English, please consider improving SpaCy's language support. 
