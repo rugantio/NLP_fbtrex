@@ -6,7 +6,8 @@ In this review I present a non-exhaustive list tools for analyzing a text corpus
 * The code uses __python3__, it can be easily backported to python2 if needed, but that's up to you.
 * This notebook can be easily viewed here in GitHub or [nbviewer](https://nbviewer.jupyter.org/). The preferred way to run the code is to clone the repository and install [__Jupyter__](https://jupyter.org/). However If you want to be able to recompute some parts without using your own jupyter, you can try the awesome [Binder](https://mybinder.org/) (currently in beta), although it won't work for extra modules such as NLPs libs.
 (Optional: Install the [__Spyder IDE__](https://github.com/spyder-ide/spyder) which provides IPython integration).
-* NLP libraries: mainly only [__spaCy__](https://spacy.io/) and [__gensim__](https://radimrehurek.com/gensim/). In the future maybe try Stanford's [__CoreNLP__](https://stanfordnlp.github.io/CoreNLP/). I will avoid using mainstream [__NLTK__](www.nltk.org) in this starting phase.* Standard Python scientific stack is needed. You can install it through the [conda](https://conda.io/) package manager, through your package manager distribution, or using __pip__, Python's own package manager.
+* NLP libraries: mainly only [__spaCy__](https://spacy.io/) and [__gensim__](https://radimrehurek.com/gensim/). In the future maybe try Stanford's [__CoreNLP__](https://stanfordnlp.github.io/CoreNLP/). I will avoid using mainstream [__NLTK__](www.nltk.org) for a [number of reasons](https://explosion.ai/blog/dead-code-should-be-buried).
+* Standard Python scientific stack is needed. You can install it through the [conda](https://conda.io/) package manager, through your package manager distribution, or using __pip__, Python's own package manager.
 
 Modules used utilize [__Pandas__](http://pandas.pydata.org/) for data analysis and naive visualization, [__scikit-learn__](http://scikit-learn.org/) for comparative machine learning.
 
@@ -46,7 +47,7 @@ pip install pandas && pip install scikit-learn
 __Note__: If you already have installed some package via pip you can upgrade to latest version with "pip install -U ModelName"
 
 ### Install NLP modules
-Let's begin our journey using only __spaCy__ for data analysis. Later on we will also use gensim to provided unsupervised training for our model. 
+Let's begin our journey using only __spaCy__ for data analysis. We will also use gensim to provide unsupervised training for our model. 
 
 I suggest to try the [__alpha__](http://alpha.spacy.io/) version, which is provided via the [__spacy-nightly__](https://pypi.python.org/pypi/spacy-nightly) module. Basic and API documentation can be found in the alpha spaCy [subdomain](https://alpha.spacy.io/usage/). For the soon-legacy documentation refer to [main domain](https://spacy.io/docs/usage/).
 ```
@@ -62,7 +63,11 @@ spacy download en_core_web_sm
 #Download Spanish model
 spacy download es_core_web_sm
 ```
-
+For phrase modeling, topic mining and word2vec analyss we are actually going to use gensim, a less newer library than spacy, but still up-to-date.
+```
+#Install gensim
+pip install gensim
+```
 ### Jupyter
 To really appreciate this work you will have to try it out yourself. The Jupyter project provides an IPython console in which you can run code on your machine. If you are in a virtual env you will have to rebuild the IPython kernel after you installed all the core deps and modules:
 ```
